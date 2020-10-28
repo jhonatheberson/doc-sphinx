@@ -3,17 +3,17 @@
 </h1>
 
 <h1 align="center">
-   🙂 <a href="#"> Digital image processing </a>
+   🙂 <a href="#"> Docs using sphinx </a>
 </h1>
 
 <h3 align="center">
-    image processing using the OpenCV library
+    documentation using python sphinx with docstring
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jhonatheberson/digital-image-processing?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jhonatheberson/doc-sphinx?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jhonatheberson/digital-image-processing">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jhonatheberson/doc-sphinx">
 
   <!-- <a href="https://www.twitter.com/tgmarinho/">
     <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Ftgmarinho%2FREADME-ecoleta">
@@ -22,13 +22,13 @@
   <a href="https://github.com/jhonatheberson/easy-church/releases">
         <img alt="GitHub release" src="https://raster.shields.io/github/v/release/jhonatheberson/template.svg">
   </a>
-  <a href="https://github.com/jhonatheberson/digital-image-processing/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jhonatheberson/digital-image-processing">
+  <a href="https://github.com/jhonatheberson/doc-sphinx/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jhonatheberson/doc-sphinx">
   </a>
 
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/jhonatheberson/digital-image-processing/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/jhonatheberson/digital-image-processing?style=social">
+   <a href="https://github.com/jhonatheberson/doc-sphinx/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/jhonatheberson/doc-sphinx?style=social">
   </a>
 
   <a href="https://github.com/jhonatheberson">
@@ -41,8 +41,8 @@
 </p>
 
 <h4 align="center"> 
-	 Status: development
-    <!-- Status: Finished -->
+	 <!-- Status: development -->
+    Status: Finished
 </h4>
 
 <p align="center">
@@ -59,31 +59,87 @@
 
 ## About
 
-🌌 Digital image processing - iis the study and application of image processing using [OpenCV](https://docs.opencv.org/master/index.html). with this library we will apply filters, recognize objects, count, among other things in the world of image processing.
+🖥️ documentation using [python](https://www.python.org/) [sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html) with [docstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) .
 
 ---
 
 ## Features
 
-- [x] Companies or entities can register on the web platform by sending:
+- [x] generate html documentation
 
-  - [x] an image of the collection point
-  - [x] entity name, email and whatsapp
-  - [x] and the address so that it can appear on the map
-  - [x] in addition to selecting one or more collection items:
-    - lamps
-    - Batteries
-    - papers and cardboard
-    - electronic waste
-    - organic waste
-    - kitchen oil
+  ```Bash
+
+    # install sphinx
+    $ sudo apt install python-sphinx -y
+
+    # install theme numpy
+    $ pip install sphinx_rtd_theme
+
+    # created folder docs
+    $ mkdir docs
+
+    #init sphinx
+    $ sphinx-quickstart
+  ```
+
+  **antes de gerar o html precisa alterar os arquivos de configurações**
+
+  _conf.py_
+
+  ```
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('../'))
+
+    extensions = ['sphinx.ext.autodoc']
+
+    html_theme = 'sphinx_rtd_theme'
+  ```
+
+  and **index.rst**
+
+  ```
+  .. automodule:: ga
+   :members:
+  ```
+
+  ## now generetor html
+
+  ```
+  make html
+  ```
+
+- [x] generate pdf documentation
+
+  requisites install texmaker
+
+  ```
+  make latexpdf
+  ```
+
+  open **.tex** with texmake for generater **.pdf**
+
+  <!-- - [x] an image of the collection point
+
+
+- [x] entity name, email and whatsapp
+- [x] and the address so that it can appear on the map
+- [x] in addition to selecting one or more collection items:
+
+  - lamps
+  - Batteries
+  - papers and cardboard
+  - electronic waste
+  - organic waste
+  - kitchen oil
 
 - [x] Users have access to the mobile application, where they can:
   - [x] browse the map to see the registered institutions
-  - [x] contact the entity via E-mail or WhatsApp
+  - [x] contact the entity via E-mail or WhatsApp -->
 
 ---
 
+<!--
 ## Layout
 
 The application layout is available on Figma:
@@ -118,37 +174,38 @@ This project is divided into three parts:
 2. Frontend (web folder)
 3. Mobile (mobile folder)
 
-Both Frontend and Mobile need the Backend to be running to work.
+Both Frontend and Mobile need the Backend to be running to work. -->
 
 ### Pre-requisites
 
 Before you begin, you will need to have the following tools installed on your machine:
-[Git] (https://git-scm.com), [Node.js] (https://nodejs.org/en/).
-In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/)
+[Git](https://git-scm.com), [Python](https://www.python.org/).
+In addition, it is good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
 
 #### Rodando o Backend (servidor)
 
 ```bash
 
 # Clone this repository
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+$ git clone git@github.com:jhonatheberson/doc-sphinx.git
 
 # Access the project folder cmd/terminal
-$ cd README-ecoleta
+$ cd docs
 
 # go to the server folder
-$ cd server
+$ cd _build
 
 # install the dependencies
-$ npm install
+$ yarn
 
 # Run the application in development mode
-$ npm run dev:server
+$ firefox html/index.html
 
-# The server will start at port: 3333 - go to http://localhost:3333
+
 
 ```
 
+<!--
 <p align="center">
   <a href="https://github.com/tgmarinho/README-ecoleta/blob/master/Insomnia_API_Ecoletajson.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </p>
@@ -174,7 +231,7 @@ $ npm run start
 
 # The application will open on the port: 3000 - go to http://localhost:3000
 
-```
+``` -->
 
 ---
 

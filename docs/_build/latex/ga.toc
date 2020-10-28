@@ -1,0 +1,3 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Indices and tables}{5}{chapter.1}% 
+\contentsline {chapter}{Python Module Index}{7}{section*.26}% 

@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to ga’s documentation! &mdash; ga 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> ga
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to ga’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ga</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to ga’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ga">
+<span id="welcome-to-ga-s-documentation"></span><h1>Welcome to ga’s documentation!<a class="headerlink" href="#module-ga" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="ga.Genetic">
+<em class="property">class </em><code class="sig-prename descclassname">ga.</code><code class="sig-name descname">Genetic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mutation_probability</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">selection_probability</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">sigma</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">num_parents</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">num_elitism</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">maxiter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selection_method</span><span class="o">=</span><span class="default_value">'elitism'</span></em>, <em class="sig-param"><span class="n">cross_over</span><span class="o">=</span><span class="default_value">'uniform'</span></em>, <em class="sig-param"><span class="n">mutation</span><span class="o">=</span><span class="default_value">'gaussian'</span></em>, <em class="sig-param"><span class="n">submit_to_cluster</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Genetic(maxiter=1000, goal=0, cross_over=’one_point’,</dt><dd><p>mutation_probability=0.01, mutation=’uniform’,
+selection_method=’elitism’,num_parents=2,
+num_elitism=10, bounds=np.array((np.ones(2) * 10 * -1, np.ones(2) * 10)))</p>
+</dd>
+</dl>
+<p>É a classe que é responsavel por realizar a criar a população, 
+selecionar os parentes da população, realizar os cruzamentos e mutação.</p>
+<dl class="simple">
+<dt>goal<span class="classifier">float, opcional</span></dt><dd><p>Define o valor a qual queremos nos aproximar</p>
+</dd>
+<dt>bounds<span class="classifier">numpy.ndarray</span></dt><dd><p>Define até onde pode ir os valores dos individuo, como inferio e superior</p>
+</dd>
+<dt>mutation_probability<span class="classifier">float</span></dt><dd><p>Define a probabilidade de ocorrer a mutação</p>
+</dd>
+<dt>selection_probability<span class="classifier">float</span></dt><dd><p>Define a probabilidade de ocorrer a seleção de pais</p>
+</dd>
+<dt>sigma<span class="classifier">float</span></dt><dd><p>Define a probabilidade do individuo ter mutação</p>
+</dd>
+<dt>num_parents<span class="classifier">integer</span></dt><dd><p>Define o numero de parentes que será esolhido no metodo da seleção</p>
+</dd>
+<dt>num_elitism<span class="classifier">integer</span></dt><dd><p>Define o numero de pais que será preservado entre as gerações</p>
+</dd>
+<dt>maxiter<span class="classifier">integer,opcional</span></dt><dd><p>Define o numero de interações maximo que o algoritmo irá fazer para encontrar o resultado</p>
+</dd>
+<dt>selection_method<span class="classifier">str, opcional</span></dt><dd><p>Define o metodo de seleção que será usado para escolher os pais da proxima geração</p>
+</dd>
+<dt>cross_over<span class="classifier">str, opcional</span></dt><dd><p>Define o metodo de cruzamento que será usado</p>
+</dd>
+<dt>mutation<span class="classifier">str, opcional</span></dt><dd><p>Define o metodo de mutação que será usado</p>
+</dd>
+<dt>submit_to_cluster<span class="classifier">bool, opcional</span></dt><dd><p>Define se a meta-hurística será executada no cluster</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fffit</span> <span class="kn">import</span> <span class="n">ga</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bounds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ga</span><span class="o">.</span><span class="n">Genetic</span><span class="p">(</span><span class="n">maxiter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">goal</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cross_over</span><span class="o">=</span><span class="s1">&#39;one_point&#39;</span><span class="p">,</span>
+<span class="go">                   mutation_probability=0.01, mutation=&#39;uniform&#39;,</span>
+<span class="go">                   selection_method=&#39;elitism&#39;,num_parents=2,</span>
+<span class="go">                   num_elitism=10, bounds=bounds)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="ga.Genetic.calculate_avg_fitness">
+<code class="sig-name descname">calculate_avg_fitness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.calculate_avg_fitness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calcula a aptidão de media entre todas as populações e salva na lista da classe genética.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>void</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.calculate_best_fitness">
+<code class="sig-name descname">calculate_best_fitness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.calculate_best_fitness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calcula a melhor aptidão entre todas as populações e salva na lista da classe genética.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>void</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.calculate_pop_fitness">
+<code class="sig-name descname">calculate_pop_fitness</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.calculate_pop_fitness" title="Permalink to this definition">¶</a></dt>
+<dd><p>calcula a aptidão da população e retorna em lista da classe genética.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>void</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.cross_over_one_point">
+<code class="sig-name descname">cross_over_one_point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.cross_over_one_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta função realiza o cruzamento de um ponto no gene.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.
+:param parents :(<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>): parents gene to carry out the mutation.</p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.cross_over_two_points">
+<code class="sig-name descname">cross_over_two_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.cross_over_two_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta função realiza o cruzamento de dois pontos no gene.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.
+:param parents :(<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>): parents gene to carry out the mutation.</p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.cross_over_uniform">
+<code class="sig-name descname">cross_over_uniform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.cross_over_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta função realiza o cruzamento uniforme no gene.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.
+:param parents :(<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>): parents gene to carry out the mutation.</p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.do_full_step">
+<code class="sig-name descname">do_full_step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.do_full_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute uma etapa completa de GA.</p>
+<p>Este método passa por todos os outros métodos para realizar uma completa
+Etapa GA, para que possa ser chamada a partir de um loop no método run ()..</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.elitism_selection">
+<code class="sig-name descname">elitism_selection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.elitism_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Função que realiza seleção elitista.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+<dt>Returns:</dt><dd><p>:return:population(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): An element of the population list select.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.evaluate_single_fitness_test">
+<code class="sig-name descname">evaluate_single_fitness_test</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">enum_particles</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">add_step_num</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.evaluate_single_fitness_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a função fornecida como o teste de aptidão para todas as partículas.</p>
+<dl>
+<dt>fun<span class="classifier">callable</span></dt><dd><p>The fitness test function to be minimized:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">func(individual.ichromosome,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt>enum_particles<span class="classifier">boolean</span></dt><dd><p>If <cite>True</cite>, the population will be enumerated and the individual index will
+be passed to <cite>func</cite> as keyword <cite>part_idx</cite>, added to <cite>kwargs</cite></p>
+</dd>
+<dt>add_step_num<span class="classifier">boolean</span></dt><dd><p>If <cite>True</cite>, the current step number will be passed to <cite>func</cite>
+as keyword <cite>step_num</cite>, added to <cite>kwargs</cite></p>
+</dd>
+</dl>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs: Other keywords to the fitness function, will be passed as is.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.fitness_variation">
+<code class="sig-name descname">fitness_variation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fitness_evaluation</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.fitness_variation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Essa função realiza a verificação da variação do fitness entre as populações</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fitness_evaluation ([type]): [description]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.mutation_binary">
+<code class="sig-name descname">mutation_binary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.mutation_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função realiza a mutação binária e retorna a população com a modificação,
+vale ressaltar que esta mutação só é válida para população binária.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.mutation_gaussian">
+<code class="sig-name descname">mutation_gaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.mutation_gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função realiza a mutação de Gausiana e retorna a população com a modificada.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.mutation_uniform">
+<code class="sig-name descname">mutation_uniform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.mutation_uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função realiza a mutação uniforme e retorna a população modificada.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.populate">
+<code class="sig-name descname">populate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size_population</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x0</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ndim</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sigma</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type_create</span><span class="o">=</span><span class="default_value">'uniform'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retorna uma lista consistindo de vários indivíduos que formam a população.</p>
+<dl class="simple">
+<dt>Return:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>void</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.random_selection">
+<code class="sig-name descname">random_selection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.random_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta função realiza uma seleção do torneio e retorno gene vencedor.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>sub_population(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): An element of the sub_population list select.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.roulette_selection">
+<code class="sig-name descname">roulette_selection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.roulette_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta função realiza a seleção por releta do gene a ser realizado a mutação.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param population</dt>
+<dd class="field-odd"><p>population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>selected(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): An element of the population list select.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">DEBUG</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute uma execução de otimização completa.</p>
+<p>Faz a otimização com a execução da atualização das velocidades
+e as coordenadas também verifica o critério interrompido para encontrar fitnnes.</p>
+<dl class="simple">
+<dt>func<span class="classifier">callable</span></dt><dd><p>Function that calculates fitnnes.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>The dictionary that stores the optimization results.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.selection">
+<code class="sig-name descname">selection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary]</p>
+<dl class="simple">
+<dt>Raises:</dt><dd><p>ValueError: [description]</p>
+</dd>
+<dt>Returns:</dt><dd><p>[type]: [description]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.sorted_population">
+<em class="property">static </em><code class="sig-name descname">sorted_population</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">population</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.sorted_population" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selecione o gene a ser realizado a mutação.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>:param population:(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): Lists one containing a population.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>score(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>): An element of the population list select.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ga.Genetic.update_swarm">
+<code class="sig-name descname">update_swarm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ga.Genetic.update_swarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atualize a população realizando cruzamento, mutação</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>:return population(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">Particles</span></code>): returns a list of
+swarms.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="ga.Individual">
+<em class="property">class </em><code class="sig-prename descclassname">ga.</code><code class="sig-name descname">Individual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x0</span><span class="o">=</span><span class="default_value">np.zeros(2)</span></em>, <em class="sig-param"><span class="n">ndim</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">np.array(np.ones(2) * 10 * - 1, np.ones(2) * 10)</span></em>, <em class="sig-param"><span class="n">type_create</span><span class="o">=</span><span class="default_value">'uniform'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Individual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cria os individuos que compoem a população da classe Genetic</p>
+<dl class="simple">
+<dt>fitness<span class="classifier">None or flout</span></dt><dd><p>é o melhor valor do individuo</p>
+</dd>
+<dt>size_individual<span class="classifier">int </span></dt><dd><p>é o tamanho do indiviuo</p>
+</dd>
+<dt>create_individual<span class="classifier">class ‘fffit.ga.Individual’</span></dt><dd><p>cria o individuo com suas caracteristicas</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>type_create<span class="classifier">str, optional</span></dt><dd><p>Define qual será o tipo de criação da população inicial</p>
+</dd>
+<dt>x0<span class="classifier">np.ndarray, optional</span></dt><dd><p>Define qual o ponto inicial até os limites de onde vai criar o valor do indviduo</p>
+</dd>
+<dt>bounds<span class="classifier">numpy.ndarray</span></dt><dd><p>Define até onde pode ir os valores dos individuo, como inferio e superior</p>
+</dd>
+<dt>ndim<span class="classifier">integer</span></dt><dd><p>Define quantos dimensões tem o indiviuo ou seja o tamanho do array</p>
+</dd>
+<dt>sigma :float, opcional</dt><dd><p>Define a probabilidade do individuo ter mutação</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fffit</span> <span class="kn">import</span> <span class="n">ga</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ranges</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ndim</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bounds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">individual</span> <span class="o">=</span> <span class="n">ga</span><span class="o">.</span><span class="n">Individual</span><span class="p">(</span><span class="n">x0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">type_create</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">)</span>
+<span class="go">&lt;fffit.ga.Individual object at 0x7f8968797c18&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">individual</span><span class="o">.</span><span class="n">chromosome</span>
+<span class="go">array([ 5.7287427 , -0.54066483])</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="ga.Individual.create_individual">
+<code class="sig-name descname">create_individual</code><span class="sig-paren">(</span><em class="sig-param">type_create=uniform</em>, <em class="sig-param">x0=np.zeros(2)</em>, <em class="sig-param">np.array((np.ones(2) * 10 * -1</em>, <em class="sig-param">np.ones(2) * 10))</em>, <em class="sig-param">sigma=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ga.Individual.create_individual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cria os chromosome que pertence a classe Individual</p>
+<dl class="simple">
+<dt>type_create<span class="classifier">str, optional</span></dt><dd><p>Define qual será o tipo de criação da população inicial</p>
+</dd>
+<dt>x0<span class="classifier">np.ndarray, optional</span></dt><dd><p>Define qual o ponto inicial até os limites de onde vai criar o valor do indviduo</p>
+</dd>
+<dt>bounds<span class="classifier">numpy.ndarray</span></dt><dd><p>Define até onde pode ir os valores dos individuo, como inferio e superior</p>
+</dd>
+<dt>sigma :float, opcional</dt><dd><p>Define a probabilidade do individuo ter mutação</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Jhonat Heberson
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

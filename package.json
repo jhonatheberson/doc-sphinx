@@ -1,0 +1,27 @@
+{
+  "name": "digital-image-processing",
+  "version": "1.0.0",
+  "description": "Digital image processing - iis the study and application of image processing using",
+  "main": "index.js",
+  "repository": "git@github.com:jhonatheberson/digital-image-processing.git",
+  "author": "jhonatheberson <jhonatheberson@outlook.com.br>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "dependencies": {
+    "commitizen": "^4.2.1",
+    "husky": "^4.3.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

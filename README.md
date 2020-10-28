@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Ecoleta" title="#Ecoleta" src="./assets/banner.png" />
+    <img alt="docs" title="#docs" src="./assets/docs.png" />
 </h1>
 
 <h1 align="center">
@@ -82,7 +82,7 @@
     $ sphinx-quickstart
   ```
 
-  **antes de gerar o html precisa alterar os arquivos de configurações**
+  **before generating the html you need to change the configuration files**
 
   _conf.py_
 
